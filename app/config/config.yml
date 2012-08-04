@@ -63,3 +63,5 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: JeffreyDD\OpkomstAppBundle\Entity\User
+    group:
+        group_class: JeffreyDD\OpkomstAppBundle\Entity\Team

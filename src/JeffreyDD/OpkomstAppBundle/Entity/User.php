@@ -23,4 +23,14 @@ class User extends BaseUser
         parent::__construct();
         // your own logic
     }
+    
+   /**
+     * @ORM\ManyToMany(targetEntity="JeffreyDD\OpkomstAppBundle\Entity\Team")
+     * @ORM\JoinTable(name="fos_user_user_group",
+     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
+     * )
+     */
+    protected $groups;
+    
 }
