@@ -1,0 +1,20 @@
+{% extends 'JDDOpAppBundle:Meeting:layout.html.twig' %}
+
+{% block content_in %}
+    <ul data-role="listview">
+    {% for entity in entities %}
+        <li>
+        	<a href="{{ path('meeting_show', { 'id': entity.id }) }}">
+            	<h2>{{ entity.title }}</h2>
+            	<p>{% if entity.date %}{{ entity.date|date('Y-m-d H:i:s') }}{% endif %}</p>
+            </a>
+			<a href="{{ path('meeting_edit', { 'id': entity.id }) }}">Edit</a>
+		</li>
+    {% endfor %}
+		<li data-theme="b">
+			<a href="{{ path('meeting_new') }}">
+				Create a new entry
+			</a>
+		</li>
+    </ul>
+{% endblock %}

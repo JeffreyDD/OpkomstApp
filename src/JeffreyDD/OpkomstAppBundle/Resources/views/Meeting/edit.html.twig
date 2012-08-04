@@ -1,0 +1,21 @@
+{% extends 'JDDOpAppBundle:Meeting:layout.html.twig' %}
+
+{% block content_in %}
+<h1>Meeting edit</h1>
+
+<form action="{{ path('meeting_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+    {{ form_widget(edit_form) }}
+    <p>
+        <button type="submit">Edit</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <form action="{{ path('meeting_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+{% endblock %}

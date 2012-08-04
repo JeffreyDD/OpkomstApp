@@ -1,0 +1,20 @@
+JeffreyDD\OpkomstAppBundle\Entity\Meeting:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    title:
+      type: string
+      length: 255
+    description:
+      type: text
+    meetingtype:
+      type: string
+      length: 255
+    date:
+      type: datetime
+  lifecycleCallbacks: {  }

@@ -1,0 +1,10 @@
+JeffreyDD\OpkomstAppBundle\Entity\Team:
+  type: entity
+  table: fos_group
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+  lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+meeting:
+    pattern:  /
+    defaults: { _controller: "JDDOpAppBundle:Meeting:index" }
+
+meeting_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "JDDOpAppBundle:Meeting:show" }
+
+meeting_new:
+    pattern:  /new
+    defaults: { _controller: "JDDOpAppBundle:Meeting:new" }
+
+meeting_create:
+    pattern:  /create
+    defaults: { _controller: "JDDOpAppBundle:Meeting:create" }
+    requirements: { _method: post }
+
+meeting_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "JDDOpAppBundle:Meeting:edit" }
+
+meeting_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "JDDOpAppBundle:Meeting:update" }
+    requirements: { _method: post }
+
+meeting_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "JDDOpAppBundle:Meeting:delete" }
+    requirements: { _method: post }
